@@ -1,0 +1,28 @@
+create table ESTACION 
+(
+   ID                   INTEGER              not null,
+   ID_SECTOR            INTEGER              not null,
+   INSTRUCTORES         INTEGER,
+   APIRANTES            INTEGER,
+   constraint PK_ESTACION primary key (ID, ID_SECTOR)
+);
+
+create table SECTOR 
+(
+   ID_SECTOR            INTEGER              not null,
+   NOMBRE_SECTOR        VARCHAR2(20),
+   constraint PK_SECTOR primary key (ID_SECTOR)
+);
+
+
+create table SUBTENIENTES 
+(
+   ID                   INTEGER              not null,
+   NOMBRES              VARCHAR2(25),
+   APELLIDOS            VARCHAR2(25),
+   DIRECCION            VARCHAR2(25),
+   TELEFONO             VARCHAR2(10),
+   FECHA_DE_NACIMIENTO  DATE,
+   ANOS_DE_SERVICIO     INTEGER,
+   constraint PK_SUBTENIENTES primary key (ID)
+);
